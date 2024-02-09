@@ -101,6 +101,7 @@ a:hover, a:focus, a:active {
  *
  * ------------------------------------------------------------------- 
  */
+
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
 	font-family: "poppins-semibold", sans-serif;
 	color: #313131;
@@ -2642,3 +2643,54 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* custom css by me */
+.title-holder {
+	top: 28%;
+	height: 5%;
+	left: 45%;
+	position: absolute;   
+	text-align: left;
+
+  }
+.title {
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	white-space: no-wrap;
+	display:block;
+	border-right: 3px solid #f9d566;
+	animation: typewriter 7s steps(20) infinite, blinking-cursor 0.5s infinite;
+	animation-fill-mode: forwards
+  }
+  
+  @keyframes typewriter {
+	0% { width: 0 }
+	5% { width: 0% }
+	10% { width: 20% }
+	15% { width: 30% }
+	20% { width: 40% }
+	25% { width: 50%; }
+	30% { width: 60%; }
+	35% { width: 70; }
+	40% { width: 80% }
+	45% { width: 100% }
+	50% { width: 100% }
+	55% { width: 100% }
+	60% { width: 100% }
+	65% { width: 80%; }
+	70% { width: 70%; }
+	75% { width: 60%; }
+	80% { width: 50% }
+	85% { width: 40% }
+	90% { width: 30% }
+	95% { width: 20% }
+	100% { width: 0% }
+  }
+
+
+  
+  @keyframes blinking-cursor {
+	from { border-color: transparent }
+	to { border-color: #f9d566 }
+  }
