@@ -395,6 +395,7 @@ textarea {
 	width: 94%;
 	max-width: 1140px;
 	margin: 0 auto;
+	display: flex;
 }
 
 .row:before,
@@ -412,6 +413,10 @@ textarea {
 	max-width: none;
 	margin-left: -20px;
 	margin-right: -20px;
+}
+
+.justify-content-center {
+	justify-content: center;
 }
 
 [class*="col-"],

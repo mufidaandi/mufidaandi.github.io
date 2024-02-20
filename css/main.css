@@ -2645,10 +2645,52 @@ footer .copyright span:last-child::after {
 /*# sourceMappingURL=main.css.map */
 
 /* custom css by me */
+.projects {
+	display: flex;
+	align-items: start;
+	justify-content: space-around;
+	margin-top: 3rem;
+}
+
+.project-display {
+	border: 1px solid;
+	padding: 10px;
+}
+
+.project-display p {
+	margin: 0;
+}
+
+.project-desc {
+	text-align: justify;
+}
+
+.project-title {
+	display: flex;
+	flex-direction: row;
+	font-weight: bold;
+}
+.project-title .icon {
+	margin-right: 10px;
+}
+
+.tech-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 5%;
+	flex-wrap: wrap;
+}
+
+.tech-container img {
+	height: 5rem;
+}
+
 .title-holder {
 	top: 28%;
 	height: 5%;
-	left: 45%;
+	left: 43%;
 	position: absolute;   
 	text-align: left;
 
@@ -2663,6 +2705,7 @@ footer .copyright span:last-child::after {
 	animation: typewriter 7s steps(20) infinite, blinking-cursor 0.5s infinite;
 	animation-fill-mode: forwards
   }
+
   
   @keyframes typewriter {
 	0% { width: 0 }
