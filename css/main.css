@@ -2538,10 +2538,10 @@ footer {
 	font-size: 1.4rem;
 	font-family: "poppins-regular", sans-serif;
 }
-footer a, footer a:visited {
+a, a:visited {
 	color: #FFFFFF;
 }
-footer a:hover, footer a:focus {
+a:hover, a:focus {
 	color: #b983c4;
 }
 footer .row {
