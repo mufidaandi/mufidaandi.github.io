@@ -377,12 +377,11 @@
   			badges: [{ text: 'Challenge', class: 'challenge' }],
   			image: 'images/financial-dashboard-vikings.jpg',
   			description: 'Developed as part of a hiring challenge, this app provides a clear overview of account balances for both deposit accounts and credit cards. Built end-to-end with Java Spring Boot and modern JavaScript.',
-  			tech: ['Java', 'Spring Boot', 'Bootstrap', 'JavaScript', 'Docker', 'Maven'],
+  			tech: ['Java', 'Spring Boot', 'Bootstrap', 'JavaScript', 'Docker', 'Maven', 'Render'],
   			highlights: [
-  				'Built end-to-end independently in 2-person team',
-  				'External JSON data hosting on GitHub Pages',
+  				'Built independently in 2-person team (solo dev with a project manager)',
   				'Containerized with Docker for deployment',
-  				'Accessible and minimal design',
+  				'Minimal design',
   				'RESTful API architecture'
   			],
   			links: [
