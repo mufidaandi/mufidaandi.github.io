@@ -12,7 +12,7 @@
 	/*---------------------------------------------------- */
 	/* Preloader
 	------------------------------------------------------ */ 
-   $(window).load(function() {
+   $(window).on('load', function() {
 
       // will first fade out the loading animation 
     	$("#loader").fadeOut("slow", function(){
@@ -22,7 +22,7 @@
 
       });       
 
-  	})
+  	});
 
 
   	/*---------------------------------------------------- */
@@ -197,11 +197,16 @@
    	var target = this.hash,
     	$target = $(target);
 
-    	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
-      }, 800, 'swing', function () {
-      	window.location.hash = target;
-      });
+    	// Check if target exists
+    	if ($target.length) {
+    		var scrollTop = $target.offset().top - 20; // 20px offset for better UX
+    		
+    		$('html, body').stop().animate({
+       		'scrollTop': scrollTop
+      	}, 90, 'swing', function () {
+      		window.location.hash = target;
+      	});
+      }
 
   	});  
   
@@ -286,6 +291,21 @@
 
 		}		
 
-	});		
+	});
+
+	/*---------------------------------------------------- */
+  	/* Technologies Tab Functionality
+  	------------------------------------------------------ */
+  	$('.tech-tab').on('click', function() {
+  		var tabId = $(this).data('tab');
+  		
+  		// Remove active class from all tabs and content
+  		$('.tech-tab').removeClass('active');
+  		$('.tech-tab-content').removeClass('active');
+  		
+  		// Add active class to clicked tab and corresponding content
+  		$(this).addClass('active');
+  		$('#' + tabId).addClass('active');
+  	});
 
 })(jQuery);
