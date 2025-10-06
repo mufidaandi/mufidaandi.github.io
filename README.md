@@ -10,7 +10,7 @@
 Welcome to my personal portfolio! I'm **Mufida Andi**, a passionate Full Stack Developer with expertise in the MERN stack, accessibility testing, and building intelligent web applications. This portfolio showcases my projects, skills, and professional journey.
 
 🎓 **Dean's Honour List Graduate** from Lambton College, Toronto  
-🏢 **Former Accessibility Tester** at NEOGOV  
+🏢 **Accessibility Tester** at NEOGOV  
 🚀 **Specializing in**: MERN Stack, AI Integration, Web Accessibility
 
 ## ✨ Features
