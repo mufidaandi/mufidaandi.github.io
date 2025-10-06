@@ -348,4 +348,171 @@
   		}
   	});
 
+  	/*---------------------------------------------------- */
+  	/* Project Modal Functionality
+  	------------------------------------------------------ */
+  	
+  	// Project data
+  	const projectData = {
+  		'expense-tracker': {
+  			title: 'Expense Tracker with Gemini AI',
+  			badges: [{ text: 'Featured', class: 'featured' }],
+  			image: 'images/expensure.jpg',
+  			description: 'A modern expense tracking app that uses Gemini AI to automatically categorize transactions and generate personalized financial insights. Built with React and Node.js, this application provides users with intelligent budget analysis and spending recommendations.',
+  			tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'Vercel', 'Express.js'],
+  			highlights: [
+  				'AI-powered categorization and budget insights',
+  				'Clean, accessible desktop-first UI',
+  				'Real-time financial analytics',
+  				'Intelligent spending recommendations',
+  				'Secure user authentication'
+  			],
+  			links: [
+  				{ url: 'https://github.com/mufidaandi/ai-financial-dashboard', text: 'View Code', icon: 'fa-github' },
+  				{ url: 'https://ai-financial-dashboard.vercel.app/', text: 'Live Demo', icon: 'fa-external-link' }
+  			]
+  		},
+  		'financial-dashboard': {
+  			title: 'Financial Dashboard (Happy Hive Hiring Challenge)',
+  			badges: [{ text: 'Challenge', class: 'challenge' }],
+  			image: 'images/financial-dashboard-vikings.jpg',
+  			description: 'Developed as part of a hiring challenge, this app provides a clear overview of account balances for both deposit accounts and credit cards. Built end-to-end with Java Spring Boot and modern JavaScript.',
+  			tech: ['Java', 'Spring Boot', 'Bootstrap', 'JavaScript', 'Docker', 'Maven'],
+  			highlights: [
+  				'Built end-to-end independently in 2-person team',
+  				'External JSON data hosting on GitHub Pages',
+  				'Containerized with Docker for deployment',
+  				'Accessible and minimal design',
+  				'RESTful API architecture'
+  			],
+  			links: [
+  				{ url: 'https://github.com/mufidaandi/financial_dashboard_teamvikings', text: 'View Code', icon: 'fa-github' },
+  				{ url: 'https://financial-dashboard-teamvikings.onrender.com/', text: 'Live Demo', icon: 'fa-external-link' },
+  				{ url: 'https://whimsical.com/team-vikings-group-challenge-financial-dashboard-wireframe-NZudMJg77TgMYbLGVPggtP', text: 'View Wireframe', icon: 'fa-sitemap' }
+  			]
+  		},
+  		'pet-store': {
+  			title: 'Rasvel\'s Pet Store',
+  			badges: [{ text: 'Group', class: 'group' }],
+  			image: 'images/PetStore.jpg',
+  			description: 'A modern pet store website with dynamic features including product filtering, search functionality, and smooth animations. Developed as a team project showcasing modern web development practices.',
+  			tech: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Responsive Design'],
+  			highlights: [
+  				'Dynamic product filtering and search',
+  				'Responsive design with animations',
+  				'Modern e-commerce interface',
+  				'Team collaboration and Git workflow',
+  				'Cross-browser compatibility'
+  			],
+  			links: [
+  				{ url: 'https://github.com/mufidaandi/rasvels-pet-store', text: 'View Code', icon: 'fa-github' },
+  				{ url: 'https://mufidaandi.github.io/rasvels-pet-store', text: 'Live Demo', icon: 'fa-external-link' }
+  			]
+  		},
+  		'general-store': {
+  			title: 'Rasvel\'s General Store',
+  			badges: [{ text: 'Group', class: 'group' }],
+  			image: 'images/rasvels.jpg',
+  			description: 'An elegant static website for a general merchandise store, showcasing clean design principles and engaging user experience. Focus on pure CSS implementation and responsive design.',
+  			tech: ['HTML5', 'CSS3', 'Responsive Design', 'CSS Grid', 'Flexbox'],
+  			highlights: [
+  				'Pure CSS implementation',
+  				'Elegant and engaging design',
+  				'Mobile-responsive layout',
+  				'Modern CSS techniques',
+  				'Clean code architecture'
+  			],
+  			links: [
+  				{ url: 'https://github.com/mufidaandi/rasvels', text: 'View Code', icon: 'fa-github' },
+  				{ url: 'https://mufidaandi.github.io/rasvels', text: 'Live Demo', icon: 'fa-external-link' }
+  			]
+  		}
+  	};
+
+  	// Open modal function
+  	window.openProjectModal = function(projectId) {
+  		const project = projectData[projectId];
+  		if (!project) return;
+
+  		// Populate modal content
+  		$('#modal-description').text(project.description);
+
+  		// Clear existing title section and create new one with title and badges in same row
+  		$('.modal-title-section').remove(); // Remove any existing title section
+  		
+  		let badgesHtml = '';
+  		project.badges.forEach(badge => {
+  			badgesHtml += `<span class="modal-badge ${badge.class}">${badge.text}</span>`;
+  		});
+  		
+  		// Create title section with title and badges
+  		const titleSectionHtml = `
+  			<div class="modal-title-section">
+  				<h3 id="modal-title">${project.title}</h3>
+  				<div class="modal-badges-header">${badgesHtml}</div>
+  			</div>
+  		`;
+  		
+  		// Insert the title section before the close button
+  		$('.modal-close').before(titleSectionHtml);
+
+  		// Add image if available
+  		if (project.image) {
+  			$('#modal-image').html(`<img src="${project.image}" alt="${project.title}" />`);
+  		} else {
+  			$('#modal-image').empty();
+  		}
+
+  		// Add tech tags
+  		let techHtml = '';
+  		project.tech.forEach(tech => {
+  			techHtml += `<span class="tech-tag">${tech}</span>`;
+  		});
+  		$('#modal-tech').html(techHtml);
+
+  		// Add highlights
+  		let highlightsHtml = '<h5>Key Features</h5><ul>';
+  		project.highlights.forEach(highlight => {
+  			highlightsHtml += `<li>${highlight}</li>`;
+  		});
+  		highlightsHtml += '</ul>';
+  		$('#modal-highlights').html(highlightsHtml);
+
+  		// Add links
+  		let linksHtml = '';
+  		project.links.forEach(link => {
+  			linksHtml += `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="modal-link">
+  				<i class="fa ${link.icon}"></i> ${link.text}
+  			</a>`;
+  		});
+  		$('#modal-links').html(linksHtml);
+
+  		// Show modal
+  		$('#project-modal').fadeIn(300);
+  		$('body').css('overflow', 'hidden');
+  	};
+
+  	// Close modal function
+  	function closeProjectModal() {
+  		$('#project-modal').fadeOut(300);
+  		$('body').css('overflow', 'auto');
+  	}
+
+  	// Close modal when clicking close button
+  	$('.modal-close').on('click', closeProjectModal);
+
+  	// Close modal when clicking outside
+  	$('#project-modal').on('click', function(e) {
+  		if (e.target === this) {
+  			closeProjectModal();
+  		}
+  	});
+
+  	// Close modal with ESC key
+  	$(document).on('keydown', function(e) {
+  		if (e.key === 'Escape' && $('#project-modal').is(':visible')) {
+  			closeProjectModal();
+  		}
+  	});
+
 })(jQuery);
