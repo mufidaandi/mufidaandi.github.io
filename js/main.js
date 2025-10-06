@@ -308,4 +308,44 @@
   		$('#' + tabId).addClass('active');
   	});
 
+  	/*---------------------------------------------------- */
+  	/* Mobile Hamburger Menu
+  	------------------------------------------------------ */
+  	$('#hamburger-menu').on('click', function() {
+  		$(this).toggleClass('active');
+  		$('#nav-menu').toggleClass('active');
+  		
+  		// Prevent body scroll when menu is open
+  		if ($(this).hasClass('active')) {
+  			$('body').css('overflow', 'hidden');
+  		} else {
+  			$('body').css('overflow', 'auto');
+  		}
+  	});
+
+  	// Close menu when clicking on navigation links
+  	$('.nav-link').on('click', function() {
+  		$('#hamburger-menu').removeClass('active');
+  		$('#nav-menu').removeClass('active');
+  		$('body').css('overflow', 'auto');
+  	});
+
+  	// Close menu when clicking outside
+  	$(document).on('click', function(e) {
+  		if (!$(e.target).closest('.nav-container').length) {
+  			$('#hamburger-menu').removeClass('active');
+  			$('#nav-menu').removeClass('active');
+  			$('body').css('overflow', 'auto');
+  		}
+  	});
+
+  	// Handle window resize - close mobile menu if window becomes large
+  	$(window).on('resize', function() {
+  		if ($(window).width() > 768) {
+  			$('#hamburger-menu').removeClass('active');
+  			$('#nav-menu').removeClass('active');
+  			$('body').css('overflow', 'auto');
+  		}
+  	});
+
 })(jQuery);
