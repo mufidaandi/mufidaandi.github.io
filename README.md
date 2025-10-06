@@ -50,11 +50,13 @@ Welcome to my personal portfolio! I'm **Mufida Andi**, a passionate Full Stack D
 - **Tech**: React.js, Gemini AI API, JavaScript
 - **Features**: Intelligent expense categorization, spending insights, clean UI
 - **Highlight**: Seamless AI integration for smart financial management
+- **Demo**: [Live Site](https://ai-financial-dashboard.vercel.app/)
 
 ### 💼 Financial Dashboard
 - **Tech**: Spring Boot, JavaScript, RESTful APIs
 - **Features**: Account balance visualization, accessible interface
 - **Context**: Developed during Happy Hive hiring challenge
+- **Demo**: [Live Site](https://financial-dashboard-teamvikings.onrender.com/)
 
 ### 🐾 Rasvel's Pet Store
 - **Tech**: HTML, CSS, JavaScript, jQuery
