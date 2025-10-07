@@ -358,6 +358,7 @@
   			title: 'Expense Tracker with Gemini AI',
   			badges: [{ text: 'Featured', class: 'featured' }],
   			image: 'images/expensure.jpg',
+			loom: '<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/982f3d992aa74610a8d2ab98448a8a87?sid=9e47e04a-6dc4-4fc9-bd54-8f87f2345667" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>',	
   			description: 'A modern expense tracking app that uses Gemini AI to automatically categorize transactions and generate personalized financial insights. Built with React and Node.js, this application provides users with intelligent budget analysis and spending recommendations.',
   			tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'Vercel', 'Express.js'],
   			highlights: [
@@ -376,6 +377,7 @@
   			title: 'Financial Dashboard (Happy Hive Hiring Challenge)',
   			badges: [{ text: 'Challenge', class: 'challenge' }],
   			image: 'images/financial-dashboard-vikings.jpg',
+			loom: '',
   			description: 'Developed as part of a hiring challenge, this app provides a clear overview of account balances for both deposit accounts and credit cards. Built end-to-end with Java Spring Boot and modern JavaScript.',
   			tech: ['Java', 'Spring Boot', 'Bootstrap', 'JavaScript', 'Docker', 'Maven', 'Render'],
   			highlights: [
@@ -394,6 +396,7 @@
   			title: 'Rasvel\'s Pet Store',
   			badges: [{ text: 'Group', class: 'group' }],
   			image: 'images/PetStore.jpg',
+			loom: '',
   			description: 'A modern pet store website with dynamic features including product filtering, search functionality, and smooth animations. Developed as a team project showcasing modern web development practices.',
   			tech: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Responsive Design'],
   			highlights: [
@@ -412,6 +415,7 @@
   			title: 'Rasvel\'s General Store',
   			badges: [{ text: 'Group', class: 'group' }],
   			image: 'images/rasvels.jpg',
+			loom: '',
   			description: 'An elegant static website for a general merchandise store, showcasing clean design principles and engaging user experience. Focus on pure CSS implementation and responsive design.',
   			tech: ['HTML5', 'CSS3', 'Responsive Design', 'CSS Grid', 'Flexbox'],
   			highlights: [
@@ -455,8 +459,10 @@
   		// Insert the title section before the close button
   		$('.modal-close').before(titleSectionHtml);
 
-  		// Add image if available
-  		if (project.image) {
+  		// Add loom if available
+  		if (project.loom) {
+  			$('#modal-image').html(project.loom);
+  		} else if (project.image) {
   			$('#modal-image').html(`<img src="${project.image}" alt="${project.title}" />`);
   		} else {
   			$('#modal-image').empty();
