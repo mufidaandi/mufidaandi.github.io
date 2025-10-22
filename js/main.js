@@ -357,8 +357,8 @@
   		'expense-tracker': {
   			title: 'Expense Tracker with Gemini AI',
   			badges: [{ text: 'Featured', class: 'featured' }],
-  			image: 'images/expensure.jpg',
-			loom: '<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/982f3d992aa74610a8d2ab98448a8a87?sid=9e47e04a-6dc4-4fc9-bd54-8f87f2345667" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>',	
+  			image: 'images/Expensure Screenshot.jpg',
+			loom: '<div style="position: relative; padding-bottom: 64.91862567811934%; height: 0;"><iframe src="https://www.loom.com/embed/5c340b24201f46efba86850c25021fa1?sid=2aa885e8-3953-4a90-a96c-3ac7a143a22a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>',	
   			description: 'A modern expense tracking app that uses Gemini AI to automatically categorize transactions and generate personalized financial insights. Built with React and Node.js, this application provides users with intelligent budget analysis and spending recommendations.',
   			tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'Vercel', 'Express.js'],
   			highlights: [
