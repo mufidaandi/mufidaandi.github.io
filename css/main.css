@@ -1933,6 +1933,10 @@ header .logo a {
 }
 
 @media only screen and (max-width:768px) {
+	.self-intro {
+		margin-top: 35% !important;
+
+	}
 	.intro-info img {
 		height: 7.8rem;
 		width: 7.8rem;
@@ -4249,7 +4253,7 @@ header {
 	}
 
 	.title-holder {
-	top: 32%;
+	top: 20%;
 	height: 5%;
 	left: 25%;
 	position: absolute;
