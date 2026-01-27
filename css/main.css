@@ -1783,6 +1783,10 @@ header .logo a {
 		min-height: 660px;
 	}
 
+	.intro-content {
+		padding-top: 5%;
+	}
+
 	.intro-content h1 {
 		font-size: 5.2rem;
 	}
@@ -1807,6 +1811,10 @@ header .logo a {
 @media only screen and (max-width:600px) {
 	#intro {
 		min-height: 600px;
+	}
+
+	.intro-content {
+		padding-top: 25%;
 	}
 
 	.intro-content h1 {
@@ -1920,6 +1928,13 @@ header .logo a {
 	text-align: center;
 }
 
+.self-intro-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 /**
  * responsive:
  * about
@@ -1933,10 +1948,6 @@ header .logo a {
 }
 
 @media only screen and (max-width:768px) {
-	.self-intro {
-		margin-top: 35% !important;
-
-	}
 	.intro-info img {
 		height: 7.8rem;
 		width: 7.8rem;
@@ -1966,9 +1977,6 @@ header .logo a {
 }
 
 @media only screen and (max-width:600px) {
-	.self-intro {
-        margin-top: 60% !important;
-    }
 	.intro-info {
 		text-align: center;
 		margin-top: 3rem;
@@ -3613,15 +3621,6 @@ header {
 	height: 5rem;
 }
 
-.title-holder {
-	top: 28%;
-	height: 5%;
-	left: 43%;
-	position: absolute;
-	text-align: left;
-
-}
-
 .title {
 	display: inline-block;
 	white-space: nowrap;
@@ -4254,15 +4253,6 @@ header {
 		padding: 0.8rem 1.5rem;
 		font-size: 1.2rem;
 	}
-
-	.title-holder {
-	top: 20%;
-	height: 5%;
-	left: 25%;
-	position: absolute;
-	text-align: left;
-
-}
 }
 
 @media screen and (max-width: 480px) {
