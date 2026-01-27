@@ -1966,6 +1966,9 @@ header .logo a {
 }
 
 @media only screen and (max-width:600px) {
+	.self-intro {
+        margin-top: 60% !important;
+    }
 	.intro-info {
 		text-align: center;
 		margin-top: 3rem;
