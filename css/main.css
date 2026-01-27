@@ -1784,7 +1784,7 @@ header .logo a {
 	}
 
 	.intro-content {
-		padding-top: 5%;
+		padding-top: 15%;
 	}
 
 	.intro-content h1 {
@@ -1814,7 +1814,7 @@ header .logo a {
 	}
 
 	.intro-content {
-		padding-top: 25%;
+		padding-top: 35%;
 	}
 
 	.intro-content h1 {
@@ -1843,6 +1843,7 @@ header .logo a {
 
 	.intro-social {
 		font-size: 2.4rem;
+		bottom: 3rem;
 	}
 }
 
